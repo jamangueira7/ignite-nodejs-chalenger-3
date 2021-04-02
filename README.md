@@ -43,7 +43,7 @@ Resolulção do teste.
 
 ## 👩🏿‍💻 Rotas
 
-- **`POST /users`**: Rota para cadastro de usuarios.
+- **`POST /repositories`**: Rota para cadastro de repositorios.
 
 Enviar:
 ```
@@ -55,160 +55,67 @@ Enviar:
 Retorna:
 ```
 {
-    "id": "bc57f695-ae37-48cf-9401-d8aa1f4fd914",
-    "name": "João",
-    "username": "joao",
-    "pro": false,
-    "todos": []
+	id: "c160a99b-9d3b-4669-8a35-8dce1e8196ec",
+	title: "Umbriel",
+	techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
+	url: "https://github.com/Rocketseat/umbriel",
+	likes: 0
 }
 ```
 
-- **`GET /users/:id`**: Rota para retornar o usuarios.
-
-Retorna:
-```
-{
-    "id": "bc57f695-ae37-48cf-9401-d8aa1f4fd914",
-    "name": "João",
-    "username": "joao",
-    "pro": false,
-    "todos": []
-}
-```
-
-- **`PATCH /users/:id/pro`**: Rota para ativar plano pro do usuarios.
-
-Retorna:
-```
-{
-    "id": "bc57f695-ae37-48cf-9401-d8aa1f4fd914",
-    "name": "João",
-    "username": "joao",
-    "pro": true,
-    "todos": []
-}
-```
-
-
-- **`POST /todos`**: Rota para cadastrar tarefas dos ususarios.
-
-Enviar headers:
-```
-{
-    "username": "joao"
-}
-```
-
-Enviar:
-```
-{
-    "title": "Sei la",
-    "deadline": "2021-03-31"
-}
-```
-
-Retorna:
-```
-{
-    "id": "12c44b61-61f8-4ab8-9365-49f107f1796f",
-    "title": "Sei la",
-    "deadline": "2021-03-31T00:00:00.000Z",
-    "done": false,
-    "created_at": "2021-04-01T01:50:51.046Z"
-}
-```
-- **`GET /todos`**: Rota para buscar todas as tarefas de um usuario.
-
-Enviar headers:
-```
-{
-    "username": "joao"
-}
-```
+- **`GET /repositories`**: Rota para retornar todos os repositorios.
 
 Retorna:
 ```
 [
     {
-        "id": "12c44b61-61f8-4ab8-9365-49f107f1796f",
-        "title": "Sei la",
-        "deadline": "2021-03-31T00:00:00.000Z",
-        "done": false,
-        "created_at": "2021-04-01T01:50:51.046Z"
-    },
-    {
-        "id": "47d9dbfa-5095-4465-85c6-9cb513c9c720",
-        "title": "Sei la 2",
-        "deadline": "2021-03-31T00:00:00.000Z",
-        "done": false,
-        "created_at": "2021-04-01T01:51:34.911Z"
-    },
-    {
-        "id": "db9f09c6-d788-492c-ab23-59ed99ef1340",
-        "title": "Sei la 3",
-        "deadline": "2021-03-31T00:00:00.000Z",
-        "done": false,
-        "created_at": "2021-04-01T01:51:38.452Z"
+        id: "c160a99b-9d3b-4669-8a35-8dce1e8196ec",
+        title: "Umbriel",
+        techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
+        url: "https://github.com/Rocketseat/umbriel",
+        likes: 0
     }
 ]
+
 ```
 
-- **`PUT /todos/:id`**: Rota para alterar uma tarefa de um ususario.+
+- **`POST /repositories/:id/likes`**: Rota para somar um like no repositorio.
 
-Enviar headers:
+Retorna:
 ```
 {
-    "username": "joao"
+    id: "c160a99b-9d3b-4669-8a35-8dce1e8196ec",
+    title: "Umbriel",
+    techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
+    url: "https://github.com/Rocketseat/umbriel",
+    likes: 1
 }
 ```
+
+- **`PUT /repositories/:id`**: Rota para alterar um repositorio.
 
 Enviar:
 ```
 {
-    "title": "Sei la alterado",
-    "deadline": "2021-04-02"
+        title: "Umbriel alteradao",
+        techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
+        url: "https://github.com/Rocketseat/umbriel",
+        likes: 1
 }
 ```
 
 Retorna:
 ```
 {
-    "id": "12c44b61-61f8-4ab8-9365-49f107f1796f",
-    "title": "Sei la alterado",
-    "deadline": "2021-04-02",
-    "done": false,
-    "created_at": "2021-04-01T01:50:51.046Z"
+        title: "Umbriel alteradao",
+        techs: ["React", "ReactNative", "TypeScript", "ContextApi"],
+        url: "https://github.com/Rocketseat/umbriel",
+        likes: 1
 }
 ```
 
-- **`PATCH /todos/:id/done`**: Rota para alterar o campo done de uma tarefa de um ususario.+
+- **`DELETE /repositories/:id`**: Rota para deletar um repositorio.
 
-Enviar headers:
-```
-{
-    "username": "joao"
-}
-```
-
-Retorna:
-```
-{
-    "id": "12c44b61-61f8-4ab8-9365-49f107f1796f",
-    "title": "Sei la alterado",
-    "deadline": "2021-04-02",
-    "done": true,
-    "created_at": "2021-04-01T01:50:51.046Z"
-}
-```
-
-- **`DELETE /todos/:id`**: Rota para deletar uma tarefa de um ususario.+
-
-Enviar headers:
-```
-{
-    "username": "joao"
-}
-```
 
 ## 🤔 Como contribuir
 
