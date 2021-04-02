@@ -40,7 +40,7 @@ app.put("/repositories/:id", (request, response) => {
 
   const {likes} = repositories[repositoryIndex];
   updatedRepository.likes = likes;
-  
+
   const repository = {
     ...repositories[repositoryIndex],
     ...updatedRepository

@@ -11,7 +11,7 @@
 <br>
 
 
-## Ignite Node.js - Segundo desafio
+## Ignite Node.js - Terceiro desafio
 
 ## 🚀 Tecnologias
 
@@ -26,7 +26,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 API para cadastra usuario e fazer o CRUD de tarefas.
 
-Descrição do desafio [GoStack](https://www.notion.so/Desafio-02-Trabalhando-com-middlewares-4f89bf538c2e4ee291382b92bdc36790)
+Descrição do desafio [Ignite](https://www.notion.so/Desafio-03-Corrigindo-o-c-digo-c15c8a2e212846039a367cc7b763c6dd)
 
 
 Resolulção do teste.
